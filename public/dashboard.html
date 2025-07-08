@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/output.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script
+      defer
+      src="https://kit.fontawesome.com/72df367f0f.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Dashboard - Fintrack</title>
+  </head>
+  <body class="montserrat bg-[#181818] text-white">
+    <div class="w-10/12 my-5 mx-auto">
+      <header class="flex justify-between items-center">
+        <div>
+          <h1 class="bodoni text-3xl">FIN-TRACK</h1>
+        </div>
+        <div class="flex justify-center gap-4 items-center">
+          <a href="./profile.html">
+            <div
+              class="bg-black size-10 rounded-full border-2 border-white cursor-pointer"
+            >
+              <!-- <input type="image" src="" alt="" /> -->
+            </div>
+          </a>
+          <h2 class="lg:block hidden">Welcome, John Wick</h2>
+        </div>
+      </header>
+      <main class="flex flex-col justify-center items-center gap-16 mt-15">
+        <section class="w-full flex justify-between lg:flex-row flex-col gap-8">
+          <div
+            class="lg:w-1/4 w-full border-2 border-orange-500 rounded-2xl p-3 text-orange-500"
+          >
+            <h1 class="text-3xl pb-3">20,000</h1>
+            <p>Balance</p>
+          </div>
+          <div
+            class="lg:w-1/4 w-full border-2 border-green-500 rounded-2xl p-3 text-green-500"
+          >
+            <h1 class="text-3xl pb-3">50,000</h1>
+            <p>Income</p>
+          </div>
+          <div
+            class="lg:w-1/4 w-full border-2 border-red-500 rounded-2xl p-3 text-red-500"
+          >
+            <h1 class="text-3xl pb-3">30,000</h1>
+            <p>Expenses</p>
+          </div>
+        </section>
+        <section class="w-full">
+          <form
+            action=""
+            class="flex flex-col justify-center items-center gap-4 my-5 md:w-8/12 w-full mx-auto"
+          >
+            <div class="w-full">
+              <input
+                type="number"
+                name=""
+                id=""
+                placeholder="Amount"
+                class="w-full bg-transparent text-white p-2 border-1 border-white rounded-xl"
+              />
+            </div>
+            <div class="w-full">
+              <select
+                name=""
+                id=""
+                class="w-full bg-transparent text-white p-2 border-1 border-white rounded-xl"
+              >
+                <option value="">M-Pesa</option>
+                <option value="">Cash</option>
+                <option value="">Visa Card</option>
+                <option value="">PayPal</option>
+              </select>
+            </div>
+            <div class="w-full">
+              <textarea
+                name=""
+                id=""
+                placeholder="Description"
+                class="w-full bg-transparent text-white p-2 border-1 border-white rounded-xl"
+              ></textarea>
+            </div>
+            <button type="submit" class="bg-black w-1/2 py-4 rounded-2xl">
+              Add Record
+            </button>
+          </form>
+        </section>
+        <section class="w-full">
+          <div class="w-full flex justify-between items-center">
+            <div class="flex justify-center items-center gap-4">
+              <div class="w-fit">
+                <select
+                  name=""
+                  id=""
+                  class="w-full bg-transparent text-white p-2 border-1 border-white rounded-xl"
+                >
+                  <option value="">All</option>
+                  <option value="">Cash</option>
+                  <option value="">Visa Card</option>
+                  <option value="">PayPal</option>
+                </select>
+              </div>
+
+              <div>
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  placeholder="Search by description"
+                  class="w-full bg-transparent text-white p-2 border-1 border-white rounded-xl"
+                />
+              </div>
+              <div>
+                <input
+                  type="date"
+                  name=""
+                  id=""
+                  placeholder="Data Range"
+                  class="w-full bg-transparent text-white p-2 border-1 border-white rounded-xl"
+                />
+              </div>
+            </div>
+            <div>
+              <button type="submit" class="bg-black py-2 px-8 rounded-xl">
+                Export
+              </button>
+            </div>
+          </div>
+          <div class="w-full my-4">
+            <table class="border-2 border-white border-collapse">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th>Amount</th>
+                  <th>Date</th>
+                  <th>Trx Type</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
