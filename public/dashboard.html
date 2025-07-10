@@ -10,6 +10,7 @@
       src="https://kit.fontawesome.com/72df367f0f.js"
       crossorigin="anonymous"
     ></script>
+    <script defer src="./js/script.js"></script>
     <title>Dashboard - Fintrack</title>
   </head>
   <body class="montserrat bg-[#181818] text-white">
@@ -25,10 +26,12 @@
         </div>
         <div class="flex justify-center gap-4 items-center">
           <a href="./profile.html">
-            <div
-              class="bg-black size-10 rounded-full border-2 border-white cursor-pointer"
-            >
-              <!-- <input type="image" src="" alt="" /> -->
+            <div>
+              <img
+                src="./images/ICONS JOHN WICK_.jpeg"
+                alt=""
+                class="size-15 rounded-full border-2 border-white cursor-pointer"
+              />
             </div>
           </a>
           <h2 class="lg:block hidden">Welcome, John Wick</h2>
@@ -39,24 +42,25 @@
           <div
             class="lg:w-1/4 w-full border-2 border-orange-500 rounded-2xl p-3 text-orange-500"
           >
-            <h1 class="text-3xl pb-3">20,000</h1>
+            <h1 id="balance" class="text-3xl pb-3">0</h1>
             <p>Balance</p>
           </div>
           <div
             class="lg:w-1/4 w-full border-2 border-green-500 rounded-2xl p-3 text-green-500"
           >
-            <h1 class="text-3xl pb-3">50,000</h1>
+            <h1 id="income" class="text-3xl pb-3">0</h1>
             <p>Income</p>
           </div>
           <div
             class="lg:w-1/4 w-full border-2 border-red-500 rounded-2xl p-3 text-red-500"
           >
-            <h1 class="text-3xl pb-3">30,000</h1>
+            <h1 id="expenses" class="text-3xl pb-3">0</h1>
             <p>Expenses</p>
           </div>
         </section>
         <section class="w-full">
           <form
+            id="trxform"
             action=""
             class="flex flex-col justify-center items-center gap-4 my-5 md:w-8/12 w-full mx-auto"
           >
@@ -64,7 +68,7 @@
               <input
                 type="number"
                 name=""
-                id=""
+                id="amountInput"
                 placeholder="Amount"
                 class="w-full bg-transparent text-white p-2 border-1 border-white rounded-xl"
               />
@@ -72,32 +76,39 @@
             <div class="w-full">
               <select
                 name=""
-                id=""
+                id="transactionSelection"
                 class="w-full bg-transparent text-white p-2 border-1 border-white rounded-xl"
               >
-                <option value="">M-Pesa</option>
-                <option value="">Cash</option>
-                <option value="">Visa Card</option>
-                <option value="">PayPal</option>
+                <option value="0">Select Transaction Type</option>
+                <option value="income">Income</option>
+                <option value="expenses">Expenses</option>
               </select>
             </div>
             <div class="w-full">
               <textarea
                 name=""
-                id=""
+                id="descriptionInput"
                 placeholder="Description"
                 class="w-full bg-transparent text-white p-2 border-1 border-white rounded-xl"
               ></textarea>
             </div>
-            <button type="submit" class="bg-green-500 w-2/3 py-4 rounded-2xl">
+            <button
+              id="addRecord"
+              type="submit"
+              class="bg-green-500 w-2/3 py-4 rounded-2xl"
+            >
               Add Record
             </button>
           </form>
         </section>
         <section class="w-full">
-          <div class="w-full flex justify-between items-center">
-            <div class="flex justify-center items-center gap-4">
-              <div class="w-fit">
+          <div
+            class="w-full flex flex-col md:flex-row justify-between items-start md:items-center gap-4"
+          >
+            <div
+              class="md:w-fit w-full flex flex-col md:flex-row justify-center items-start md:items-center gap-4"
+            >
+              <div class="md:w-fit w-full">
                 <select
                   name=""
                   id=""
@@ -110,7 +121,7 @@
                 </select>
               </div>
 
-              <div>
+              <div class="w-full md:w-fit">
                 <input
                   type="text"
                   name=""
@@ -119,18 +130,32 @@
                   class="w-full bg-transparent text-white p-2 border-1 border-white rounded-xl"
                 />
               </div>
-              <div>
+              <div
+                class="w-full md:w-fit flex flex-col md:flex-row justify-center items-start md:items-center gap-2"
+              >
+                <label for="">From:</label>
                 <input
                   type="date"
                   name=""
                   id=""
-                  placeholder="Data Range"
+                  placeholder="Start Date"
+                  class="w-full bg-transparent text-white p-2 border-1 border-white rounded-xl"
+                />
+                <label for="">To:</label>
+                <input
+                  type="date"
+                  name=""
+                  id=""
+                  placeholder="End Date"
                   class="w-full bg-transparent text-white p-2 border-1 border-white rounded-xl"
                 />
               </div>
             </div>
-            <div>
-              <button type="submit" class="bg-green-500 py-2 px-8 rounded-xl">
+            <div class="w-full md:w-fit">
+              <button
+                type="submit"
+                class="bg-green-500 py-2 px-8 rounded-xl w-full md:w-fit"
+              >
                 Export
               </button>
             </div>
